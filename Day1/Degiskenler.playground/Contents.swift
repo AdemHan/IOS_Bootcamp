@@ -25,3 +25,27 @@ print("Ürün adı : \(urun_adi)")
 print("Ürün adet : \(urun_adet)")
 print("Ürün fiyat : \(urun_fiyat)")
 print("Ürün tedarikçi : \(urun_tedarikci)")
+
+
+//Tür dönüşümü
+//Sayısaldan sayısala
+var i = 42
+var d = 56.78
+
+var sonuc1 = Double(i)
+var sonuc2 = Int(d)
+print(sonuc1)
+print(sonuc2)
+
+//sayısaldan metine
+var sonuc3 = String(i)
+var sonuc4 = String(d)
+print(sonuc3)
+print(sonuc4)
+
+//metinden sayısala
+var yazi = "34"
+if let sonuc5 = Int(yazi){
+    print(sonuc5)
+}
+
