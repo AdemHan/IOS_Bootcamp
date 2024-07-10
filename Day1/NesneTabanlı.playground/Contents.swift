@@ -78,4 +78,54 @@ sahin.bilgial()
 sahin.yavasla(kacKm: 10)
 sahin.bilgial()
 
+class Fonksiyonlar {
+    
+    //geri dönüş değeri olmayan (void)
+    func selamla1(){
+        let sonuc = "Merhaba Ahmet"
+        print(sonuc)
+    }
+    
+    //geri dönüş değeri olan (return)
+    func selamla2() ->String {
+        let sonuc = "Merhaba Adem"
+        return sonuc
+    }
+    
+    //parametre girilen fonksiyon
+    func selamla3(isim:String){
+        let sonuc = ("Merhaba \(isim)")
+        print(sonuc)
+    }
+    
+    //hem parametre girilen hem de return olan fonksiyon
+    func toplama (sayi1:Int, sayi2:Int) -> Int {
+        let toplam = sayi1 + sayi2
+        return toplam
+    }
+    
+    //overloading: Bir class içerisinde aynı isimde birden fazla fonksiyon oluşturmamıza yarar. Bunu yapmanın yolu parametrelerin farklı veri türlerinde olmasıdır
+    func carpma (sayi1:Int, sayi2:Int) {
+        print("Çarpma sonucu : \(sayi1 * sayi2)")
+    }
+    func carpma (sayi1:Double, sayi2:Double) {
+        print("Çarpma sonucu : \(sayi1 * sayi2)")
+    }
+    
+}
+
+let f = Fonksiyonlar()
+f.selamla1()
+
+let gelensonuc = f.selamla2()
+print("Gelen Sonuc: \(gelensonuc)")
+
+//sadece return olan fonksiyon geri değer döndürür. Diğeri sadece fonksiyon içerisindeki işlemi yapar.
+
+f.selamla3(isim: "Mahmut")
+
+var gelenToplam = f.toplama(sayi1: 15, sayi2: 7)
+print(gelenToplam)
+
+f.carpma(sayi1: 5, sayi2: 7)
 
