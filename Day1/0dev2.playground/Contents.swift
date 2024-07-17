@@ -44,7 +44,7 @@ class Hesaplamalar{
     //6.görev
     func maasHesabi (calisilanGunSayisi:Int) -> Int{
         var toplamSaat = calisilanGunSayisi * 8
-        var mesaiSaati = 0
+        var mesaiSaati:Int
         var mesaiUcreti = 80
         var toplamMesaiUcreti = 0
         var normalUcret = 40
@@ -79,6 +79,26 @@ class Hesaplamalar{
         return toplamUcret
     }
     
+    //ek 1
+    func daireAlani (yariCap:Double) -> Double {
+        var alan = 3.14 * yariCap * yariCap
+        return alan
+    }
+    
+    //ek1
+    
+    func basamakToplama(sayi: Int) -> Int {
+        var toplam = 0
+        var num = sayi
+        
+        while num > 0 {
+            toplam += num % 10
+            num /= 10
+        }
+        
+        return toplam
+    }
+    
 }
 
 var o2 = Hesaplamalar()
@@ -101,3 +121,9 @@ print("Toplam ücretim: \(maasim)")
 
 var otoparkGiderim = o2.otoparkUcreti(gecirilenSaat: 3)
 print("Toplam ücretim: \(otoparkGiderim)")
+
+var daireAlani = o2.daireAlani(yariCap: 3)
+print("Dairenin alanı: \(daireAlani)")
+
+let sonuc = o2.basamakToplama(sayi: 15)
+print("Giriğiniz sayının basamkları toplamı: \(sonuc).")

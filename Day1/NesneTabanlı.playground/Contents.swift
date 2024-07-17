@@ -129,3 +129,20 @@ print(gelenToplam)
 
 f.carpma(sayi1: 5, sayi2: 7)
 
+//statik değişkenler ve metodlar
+class ASinifi {
+    var x = 10
+    
+    func metod() {
+        print("Metod Çalıştı")
+    }
+}
+
+let a = ASinifi()
+
+print(a.x)
+
+print(ASinifi().x)  //Sanal nesne - virtual object - isimsiz nesne
+
+ASinifi().metod()
+
