@@ -69,3 +69,57 @@ memeli.sesCikar()
 kedi.sesCikar()
 kopek.sesCikar()
 
+//Tip dönüşümü
+
+//Upcasting
+var ev = Saray(kuleSayisi: 3, pencereSayisi: 5) as Ev
+
+//Downcasting
+var saray = Ev(pencereSayisi: 5) as? Saray
+
+//Protocol
+
+protocol MyProtocol {
+    var degisken: Int {get set}
+    
+    func metod1()
+    func metod2() -> String
+}
+
+class ClassA : MyProtocol {
+    var degisken: Int = 15
+    
+    func metod1() {
+        print("Metod 1 Çalıştı")
+    }
+    
+    func metod2() -> String {
+        return "Metod 2 çalıştı"
+    }
+}
+
+var a = ClassA()
+
+print(a.degisken)
+
+a.metod1()
+
+print(a.metod2())
+
+//Extension
+
+extension Int {
+    func carp(sayi:Int) -> Int {
+        return self * sayi
+    }
+}
+
+let x = 3.carp(sayi: 4)
+print(x)
+
+//Closure
+let ifade = {
+    print("Merhaba")
+}
+
+ifade()
