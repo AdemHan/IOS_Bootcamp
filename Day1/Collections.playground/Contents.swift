@@ -108,3 +108,70 @@ for o in s4 {
     print("No : \(o.no!) , İsim : \(o.ad!) , Sınıf : \(o.sinif!) ")
 }
 
+//Alıştırmalar
+
+var alisverisListesi = ["Süt", "Yumurta"]
+alisverisListesi.append("Kabartma Tozu")
+alisverisListesi.append("Muz")
+alisverisListesi.append("Çikolata")
+alisverisListesi[0] = "Taze ekmek"
+alisverisListesi.insert("Elma", at: 1)
+var boyutu = alisverisListesi.count
+var bosmu = alisverisListesi.isEmpty
+
+for ürün in alisverisListesi {
+    print("Alınacaklar : \(ürün)")
+}
+
+alisverisListesi.remove(at: 1)
+
+for ürün in alisverisListesi {
+    print("Güncel liste : \(ürün)")
+}
+
+alisverisListesi.removeAll()
+print(alisverisListesi)
+
+class Kitaplar {
+    var numara: Int?
+    var ad: String?
+    var yazar: String?
+    
+    init(numara: Int, ad: String, yazar: String) {
+        self.numara = numara
+        self.ad = ad
+        self.yazar = yazar
+    }
+}
+
+var k1 = Kitaplar(numara: 2020131, ad: "Leyla ile Mecnun", yazar: "Burak Aksak")
+var k2 = Kitaplar(numara: 1317202, ad: "Algoritmalara Giriş", yazar: "Thomas Cormen")
+var k3 = Kitaplar(numara: 1453279, ad: "Ateşten Gömlek", yazar: "Halide Edip Adıvar")
+
+var kitapListesi = [Kitaplar]()
+kitapListesi.append(k1)
+kitapListesi.append(k2)
+kitapListesi.append(k3)
+
+for i in kitapListesi {
+    print("Kitap No: \(i.numara!), Kitap Adı: \(i.ad!), Kitap Yazar : \(i.yazar!)")
+}
+
+var filtre1 = kitapListesi.filter({$0.yazar!.contains("Halide Edip Adıvar")})
+print("Filtre1")
+
+for i in filtre1 {
+    print("Kitap No: \(i.numara!), Kitap Adı: \(i.ad!), Kitap Yazar : \(i.yazar!)")
+}
+
+var sıralama1 = kitapListesi.sorted(by: {$0.numara! > $1.numara!})
+print("Sıralama1")
+for i in sıralama1 {
+    print("Kitap No: \(i.numara!), Kitap Adı: \(i.ad!), Kitap Yazar : \(i.yazar!)")
+}
+
+var sıralama2 = kitapListesi.sorted(by: {$0.ad! < $1.ad!})
+print("Sıralama2")
+for i in sıralama2 {
+    print("Kitap No: \(i.numara!), Kitap Adı: \(i.ad!), Kitap Yazar : \(i.yazar!)")
+}
