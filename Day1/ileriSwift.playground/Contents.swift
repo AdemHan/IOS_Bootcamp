@@ -12,7 +12,7 @@ func kişiTanima1(ad: String) {
 
 kişiTanima1(ad: "Adem")
 
-//ilk önce ad ademe eşit değil mi diye bakıyor. Eğer eşit değilse içindeki else çalışıyor. Fakat ad Ademe eşitse çalışmıyor. Alt satırdaki kod çalışıyor
+//ilk önce ad ademe eşit değil mi diye bakıyor. Eğer eşit değilse içindeki else çalışıyor. Fakat ad Adem'e eşitse çalışmıyor. Alt satırdaki kod çalışıyor
 func kisiTanima2(ad: String) {
     guard ad == "Adem" else{
         print("Tanınmayan kisi")
