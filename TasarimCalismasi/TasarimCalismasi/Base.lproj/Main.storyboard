@@ -67,16 +67,63 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jD-jg-3jp">
+                                <rect key="frame" x="161.33333333333334" y="404.66666666666669" width="70.666666666666657" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" name="yaziRenk2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delivery" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gam-zZ-Gcg">
+                                <rect key="frame" x="154.33333333333334" y="447" width="84.333333333333343" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" name="anaRenk"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meat lover, get ready to meet your pizza !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvA-va-Y2A">
+                                <rect key="frame" x="32" y="489.33333333333331" width="329" height="52.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" name="yaziRenk2"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 5.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zP0-id-aHg">
+                                <rect key="frame" x="16.000000000000007" y="740.33333333333337" width="116.66666666666669" height="45.666666666666629"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                                <color key="textColor" name="anaRenk"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyG-9o-ety">
+                                <rect key="frame" x="225" y="745.33333333333337" width="152" height="36"/>
+                                <color key="backgroundColor" name="anaRenk"/>
+                                <color key="tintColor" name="yaziRenk1"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="ADD TO CART">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zvA-va-Y2A" firstAttribute="top" secondItem="Gam-zZ-Gcg" secondAttribute="bottom" constant="16" id="5nc-F7-wnX"/>
+                            <constraint firstItem="Gam-zZ-Gcg" firstAttribute="centerX" secondItem="4jD-jg-3jp" secondAttribute="centerX" id="8Nx-B2-DEz"/>
+                            <constraint firstItem="zvA-va-Y2A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="8Tw-9Z-ziJ"/>
                             <constraint firstItem="QdH-Dk-0tH" firstAttribute="top" secondItem="Jbj-Os-uNV" secondAttribute="bottom" constant="16" id="CUR-9e-2Jz"/>
                             <constraint firstItem="Jbj-Os-uNV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DhA-IN-RKl"/>
+                            <constraint firstItem="zP0-id-aHg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dn3-cj-AAR"/>
                             <constraint firstItem="QdH-Dk-0tH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GjH-Ah-JUR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yyG-9o-ety" secondAttribute="trailing" constant="16" id="Izh-sm-zZz"/>
                             <constraint firstItem="lfE-vN-9UW" firstAttribute="top" secondItem="QdH-Dk-0tH" secondAttribute="bottom" constant="16" id="J8o-mW-0vN"/>
                             <constraint firstItem="Jbj-Os-uNV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ju2-Ng-AJF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zvA-va-Y2A" secondAttribute="trailing" constant="32" id="N32-gP-cWT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zP0-id-aHg" secondAttribute="bottom" constant="32" id="NXc-Ss-039"/>
+                            <constraint firstItem="4jD-jg-3jp" firstAttribute="top" secondItem="lfE-vN-9UW" secondAttribute="bottom" constant="16" id="NgS-sn-YOE"/>
                             <constraint firstItem="lfE-vN-9UW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nge-7i-HsU"/>
+                            <constraint firstItem="yyG-9o-ety" firstAttribute="centerY" secondItem="zP0-id-aHg" secondAttribute="centerY" id="UVr-IA-3vx"/>
+                            <constraint firstItem="Gam-zZ-Gcg" firstAttribute="top" secondItem="4jD-jg-3jp" secondAttribute="bottom" constant="16" id="j5r-ZD-197"/>
+                            <constraint firstItem="4jD-jg-3jp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tnX-32-iLw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ktD-NM-ce5"/>
@@ -111,6 +158,9 @@
         </namedColor>
         <namedColor name="yaziRenk1">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="yaziRenk2">
+            <color red="0.3880000114440918" green="0.3880000114440918" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
