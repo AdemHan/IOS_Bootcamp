@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  KampusumCepte
+//  CalismaYapisi
 //
-//  Created by Adem Han on 22.08.2024.
+//  Created by Adem Han on 26.08.2024.
 //
 
 import UIKit
