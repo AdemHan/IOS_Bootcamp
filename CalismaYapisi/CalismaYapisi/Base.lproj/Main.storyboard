@@ -52,6 +52,19 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ana Sayfa" id="hoA-KY-anH">
                         <barButtonItem key="backBarButtonItem" title="Geri" id="abo-hJ-2Mc"/>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="ds1-rK-y7T">
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <connections>
+                                    <action selector="buttonAdd:" destination="BYZ-38-t0r" id="Gzi-nr-LUj"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="save" id="oqr-lj-cMO">
+                                <connections>
+                                    <action selector="buttonSave:" destination="BYZ-38-t0r" id="4pD-jn-Eis"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="labelAnaSayfa" destination="5Wv-AN-aU7" id="Xb0-YU-cTq"/>
@@ -172,6 +185,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

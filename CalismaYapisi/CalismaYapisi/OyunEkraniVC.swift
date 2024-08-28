@@ -8,11 +8,18 @@
 import UIKit
 
 class OyunEkraniVC: UIViewController {
+    
+    var kisi:Kisiler?       //kişiler clasından bir nesne oluşturuldu
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let k = kisi{       //aktarılan mesaj m değişkenine iletildi
+            print(" AD : \(k.ad!)")
+            print(" YAŞ : \(k.yas!)")
+            print(" BOY : \(k.boy!)")
+            print(" BEKAR : \(k.bekar!)")
+        }
     }
     
     @IBAction func buttonGeri(_ sender: Any) {
