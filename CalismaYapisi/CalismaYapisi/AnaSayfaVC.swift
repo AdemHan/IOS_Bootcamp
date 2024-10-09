@@ -20,6 +20,7 @@ class AnaSayfaVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {    //Sayfa her göründüğünde çalışır
         print("viewWillAppear çalıştı")
+        //sayfa geri dönüldüğünde de çalışır
     }
     
     override func viewWillDisappear(_ animated: Bool) {     //Sayfa her görünmez olduğunda çalışır
