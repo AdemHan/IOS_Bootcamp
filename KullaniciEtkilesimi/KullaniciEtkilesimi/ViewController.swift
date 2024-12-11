@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonAlert(_ sender: Any) {
+        
         let alertController = UIAlertController(title: "Başlık", message: "Bu bir alert mesajı", preferredStyle: .alert)
         
         let iptalAction = UIAlertAction(title: "İptal", style: .cancel){action in
@@ -77,6 +78,7 @@ class ViewController: UIViewController {
         self.present(alertController, animated: true)
     
     }
+    
     
 }
 
