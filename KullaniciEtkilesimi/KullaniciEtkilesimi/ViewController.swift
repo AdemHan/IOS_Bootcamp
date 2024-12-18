@@ -65,11 +65,15 @@ class ViewController: UIViewController {
             textField.keyboardType = .numberPad
             textField.isSecureTextEntry = true
         }
+        
+        alertController.addTextField()
+        
         let tamamAction = UIAlertAction(title: "Tamam", style: .cancel){action in
             let tf = alertController.textFields![0] as UITextField
+            let tf1 = alertController.textFields![1] as UITextField
             
-            if let alinanVeri = tf.text{
-                print("Veri : \(alinanVeri)")
+            if let alinanVeri = tf.text, let alinanVeri1 = tf1.text{
+                print("Veri : \(alinanVeri) - \(alinanVeri1)")
             }
         }
         
