@@ -38,7 +38,7 @@ class Anasayfa: UIViewController {
     }
 }
 
-extension Anasayfa: UITableViewDataSource, UITableViewDelegate {
+extension Anasayfa: UITableViewDataSource, UITableViewDelegate, HucreProtocol {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return urunlerListesi.count
     }
@@ -55,6 +55,46 @@ extension Anasayfa: UITableViewDataSource, UITableViewDelegate {
         hucre.backgroundColor = UIColor(white: 0.95, alpha: 1)
         hucre.urunlerArkaPlan.layer.cornerRadius = 10.0
         
+        hucre.selectionStyle = .none
+        
+        hucre.hucreProtocol = self
+        hucre.indexPath = indexPath
+        
         return hucre
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let urun = urunlerListesi[indexPath.row]
+        
+        let silAction = UIContextualAction(style: .destructive, title: "Sil") { (action, view, completionHandler) in
+            print("\(urun.ad!) silindi")
+            
+        }
+        
+        let duzenleAction = UIContextualAction(style: .normal, title: "Düzenle") { (action, view, completionHandler) in
+            print("\(urun.ad!) düzenlendi")
+        }
+        
+        return UISwipeActionsConfiguration(actions: [silAction, duzenleAction])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let urun = urunlerListesi[indexPath.row]
+        performSegue(withIdentifier: "toDetay", sender: urun)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetay" {
+            if let urun = sender as? Urunler {
+                let gidilecekVC = segue.destination as! DetaySayfa
+                gidilecekVC.urun = urun
+            }
+        }
+    }
+    
+    func sepeteEkleTiklandi(indexPath: IndexPath) {
+        let urun = urunlerListesi[indexPath.row]
+        print("Sepete eklendi: \(urun.ad!)")
     }
 }

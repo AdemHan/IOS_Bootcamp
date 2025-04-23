@@ -39,19 +39,19 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="id8-RF-oav">
                                                             <rect key="frame" x="160" y="19" width="128" height="120.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 13 Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJz-1J-DMq">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="iPhone 13 Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJz-1J-DMq">
                                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="24"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35999 TL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiM-H3-zTd">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="35999 TL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiM-H3-zTd">
                                                                     <rect key="frame" x="0.0" y="40" width="111" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-hq-CW9">
+                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-hq-CW9">
                                                                     <rect key="frame" x="0.0" y="86" width="128" height="34.5"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" title="SEPETE EKLE"/>
@@ -100,6 +100,7 @@
                     <navigationItem key="navigationItem" title="Ürünler" id="ZhB-NA-5Ua"/>
                     <connections>
                         <outlet property="urunlerTableView" destination="Y38-hg-3kW" id="oFS-NX-RsM"/>
+                        <segue destination="Mfz-o9-gCE" kind="show" identifier="toDetay" id="YNc-XW-YKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -113,9 +114,42 @@
                     <view key="view" contentMode="scaleToFill" id="X49-1g-4bE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telefon" translatesAutoresizingMaskIntoConstraints="NO" id="MS8-yj-A28">
+                                <rect key="frame" x="79" y="224" width="256" height="256"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35999 ₺" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfK-7F-KbA">
+                                <rect key="frame" x="148" y="512" width="118" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyw-00-WzU">
+                                <rect key="frame" x="32" y="761" width="350" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="SEPETE EKLE"/>
+                                <connections>
+                                    <action selector="buttonSepeteEkle:" destination="Mfz-o9-gCE" eventType="touchUpInside" id="9s1-7b-i1a"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="eXl-ga-9jh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MS8-yj-A28" firstAttribute="centerX" secondItem="X49-1g-4bE" secondAttribute="centerX" id="5cd-Sg-bOc"/>
+                            <constraint firstItem="MS8-yj-A28" firstAttribute="top" secondItem="eXl-ga-9jh" secondAttribute="top" constant="32" id="E4d-2u-iWx"/>
+                            <constraint firstItem="DfK-7F-KbA" firstAttribute="centerX" secondItem="X49-1g-4bE" secondAttribute="centerX" id="Pb8-pN-rMg"/>
+                            <constraint firstItem="Eyw-00-WzU" firstAttribute="leading" secondItem="eXl-ga-9jh" secondAttribute="leading" constant="32" id="Xmd-x9-1br"/>
+                            <constraint firstItem="eXl-ga-9jh" firstAttribute="trailing" secondItem="Eyw-00-WzU" secondAttribute="trailing" constant="32" id="fwu-YA-6iO"/>
+                            <constraint firstItem="DfK-7F-KbA" firstAttribute="top" secondItem="MS8-yj-A28" secondAttribute="bottom" constant="32" id="w4x-ZY-vrl"/>
+                            <constraint firstItem="eXl-ga-9jh" firstAttribute="bottom" secondItem="Eyw-00-WzU" secondAttribute="bottom" constant="32" id="yvd-le-sZ8"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="aA7-dF-Hvh"/>
+                    <connections>
+                        <outlet property="imageViewUrun" destination="MS8-yj-A28" id="ZBb-N0-tXq"/>
+                        <outlet property="labelUrunFiyat" destination="DfK-7F-KbA" id="QnW-z3-Z28"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ynb-hf-A4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
